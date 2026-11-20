@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App đầu tiên</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 40px 20px;
+           background: #111; color: #fff; transition: background .3s; }
+    h1 { font-size: 28px; }
+    button { font-size: 20px; padding: 14px 28px; border: 0;
+             border-radius: 12px; background: #4f8cff; color: #fff; }
+    #dem { font-size: 48px; margin: 24px 0; }
+  </style>
+</head>
+<body>
+  <h1>Xin chào, đây là app đầu tiên của tôi!</h1>
+  <div id="dem">0</div>
+  <button onclick="tang()">Bấm vào tôi</button>
+  <script>
+    let dem = 0;
+    function tang() {
+      dem++;
+      document.getElementById('dem').textContent = dem;
+      document.body.style.background =
+        'hsl(' + (dem * 40 % 360) + ', 60%, 25%)';
+    }
+  </script>
+</body>
+</html>
